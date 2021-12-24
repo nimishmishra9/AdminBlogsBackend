@@ -10,7 +10,5 @@ namespace AdminBlogs.Models
         public string EmailId {get;set;}
         [Required]
         public string Passsword {get;set;}
-        [Required]
-        public string Role {get;set;}
     }
 }

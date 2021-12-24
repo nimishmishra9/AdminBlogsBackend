@@ -10,5 +10,6 @@ namespace AdminBlogs.Models
 
         }
         public DbSet<Login> logins { get; set; }
+        public DbSet<UserModel> userModels { get; set; }
     }
 }

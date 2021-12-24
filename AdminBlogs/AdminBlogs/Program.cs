@@ -1,5 +1,8 @@
 using AdminBlogs.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +15,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option => {
+    var serverSecret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryVerySecretKey"));
+    option.TokenValidationParameters = new TokenValidationParameters
+    {
+        IssuerSigningKey = serverSecret,
+        ValidIssuer = "https://localhost:7031/",
+        ValidAudience = "*",
+    };
+});
+
+
 var app = builder.Build();
+app.UseAuthentication();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
