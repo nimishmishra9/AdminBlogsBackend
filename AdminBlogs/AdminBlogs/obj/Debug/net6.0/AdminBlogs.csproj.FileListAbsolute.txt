@@ -66,3 +66,9 @@ C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\Microsof
 C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\obj\Debug\net6.0\AdminBlogs.csproj.AssemblyReference.cache
+C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\NPOI.OOXML.dll
+C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\NPOI.OpenXml4Net.dll
+C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\NPOI.OpenXmlFormats.dll
+C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\NPOI.dll
+C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\SONY\Desktop\AdminBlogs\AdminBlogs\AdminBlogs\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
