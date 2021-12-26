@@ -39,5 +39,9 @@ namespace AdminBlogs.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
+        public  OkObjectResult UserRegistration(UserModel userModel)
+        {
+            return _authRepository.UserRegistration(userModel);
+        }
     }
 }

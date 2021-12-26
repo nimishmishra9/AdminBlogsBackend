@@ -12,12 +12,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AdminBlogsContext>(options => {
     options.UseSqlServer("Data Source=DESKTOP-CAGAKSJ\\NIMISHDB;Initial Catalog=AdminBlogs;User ID=sa;Password=Sbsstc@123");
 });
+builder.Services.AddSwaggerGen(options =>
+{
+    options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+});
+
+
+
 builder.Services.AddControllers();
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IAuthRepository, AuthRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option => {
     var serverSecret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryVerySecretKey"));
@@ -44,6 +51,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 
 app.UseAuthorization();
 

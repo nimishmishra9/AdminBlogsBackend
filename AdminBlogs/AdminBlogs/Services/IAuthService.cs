@@ -8,5 +8,6 @@ namespace AdminBlogs.Services
         public IEnumerable<UserModel> UserDetails();
         public UserModel Authenticate(Login login);
         public string BuildToken(UserModel user);
+        public OkObjectResult UserRegistration(UserModel userModel);
     }
 }

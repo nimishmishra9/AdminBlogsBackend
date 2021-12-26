@@ -17,8 +17,9 @@ namespace AdminBlogs.Controllers
            _authService = authService;
         }
 
-        [AllowAnonymous]
-        [HttpPost(Name = "PostLoginDetails")]
+        
+        [HttpPost]
+        [Route("PostLoginDetails")]
         public IActionResult LoginUser([FromBody] Login login)
         {
             IActionResult response = Unauthorized();
@@ -31,7 +32,15 @@ namespace AdminBlogs.Controllers
             return Ok(Json(response, user));
         }
         
-        [AllowAnonymous]
+      
+        [HttpPost]
+        [Route("UsersRegistration")]
+        public OkObjectResult UserRegistration(UserModel userModel)
+        {
+            return   _authService.UserRegistration(userModel);
+        }
+
+        
         [HttpGet(Name = "GetUserDetials")]
         public IEnumerable<UserModel> UserDetails()
         {
