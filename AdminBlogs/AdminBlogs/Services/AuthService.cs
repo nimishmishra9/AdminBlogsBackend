@@ -17,16 +17,16 @@ namespace AdminBlogs.Services
             this._authRepository = authRepository;
             this._config = config;
         }
-        public IEnumerable<UserModel> UserDetails()
+        public IEnumerable<User> UserDetails()
         {
             return _authRepository.UserDetails();
         }
 
-        public UserModel Authenticate(Login login)
+        public User Authenticate(Login login)
         {
             return _authRepository.Authenticate(login);
         }
-        public string BuildToken(UserModel user)
+        public string BuildToken(User user)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -39,7 +39,7 @@ namespace AdminBlogs.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public  OkObjectResult UserRegistration(UserModel userModel)
+        public  OkObjectResult UserRegistration(User userModel)
         {
             return _authRepository.UserRegistration(userModel);
         }

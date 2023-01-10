@@ -5,8 +5,8 @@ namespace AdminBlogs.Repositories
 {
     public interface IAuthRepository
     {
-        public IEnumerable<UserModel> UserDetails();
-        public UserModel Authenticate(Login login);
-        public OkObjectResult UserRegistration(UserModel userModel);
+        public IEnumerable<User> UserDetails();
+        public User Authenticate(Login login);
+        public OkObjectResult UserRegistration(User userModel);
     }
 }

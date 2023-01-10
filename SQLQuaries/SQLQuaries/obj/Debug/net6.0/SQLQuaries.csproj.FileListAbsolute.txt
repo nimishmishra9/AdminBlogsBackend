@@ -1,0 +1,15 @@
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\bin\Debug\net6.0\SQLQuaries.exe
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\bin\Debug\net6.0\SQLQuaries.deps.json
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\bin\Debug\net6.0\SQLQuaries.runtimeconfig.json
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\bin\Debug\net6.0\SQLQuaries.dll
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\bin\Debug\net6.0\ref\SQLQuaries.dll
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\bin\Debug\net6.0\SQLQuaries.pdb
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.csproj.AssemblyReference.cache
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.AssemblyInfoInputs.cache
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.AssemblyInfo.cs
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.csproj.CoreCompileInputs.cache
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.dll
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\ref\SQLQuaries.dll
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.pdb
+C:\Users\SONY\Desktop\AdminBlogs\SQLQuaries\SQLQuaries\obj\Debug\net6.0\SQLQuaries.genruntimeconfig.cache

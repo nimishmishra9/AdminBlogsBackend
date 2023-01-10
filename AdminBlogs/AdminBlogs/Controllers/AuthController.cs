@@ -9,8 +9,6 @@ namespace AdminBlogs.Controllers
     [Route("api/[controller]")]
     public class AuthController : Controller
     {
-        private readonly AdminBlogsContext _AdminBlogsContext;
-        
         private IAuthService _authService;
         public AuthController(IAuthService authService)
         {
@@ -28,21 +26,22 @@ namespace AdminBlogs.Controllers
             {
                 var tokenString = _authService.BuildToken(user);
                 response = Ok(new { token = tokenString });
+                return Ok(Json(response, user));
             }
-            return Ok(Json(response, user));
+            return StatusCode(404, "User does not exist");
         }
         
       
         [HttpPost]
         [Route("UsersRegistration")]
-        public OkObjectResult UserRegistration(UserModel userModel)
+        public OkObjectResult UserRegistration(User userModel)
         {
             return   _authService.UserRegistration(userModel);
         }
 
         
         [HttpGet(Name = "GetUserDetials")]
-        public IEnumerable<UserModel> UserDetails()
+        public IEnumerable<User> UserDetails()
         {
           return _authService.UserDetails();
         }

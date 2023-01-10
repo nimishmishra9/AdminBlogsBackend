@@ -11,26 +11,26 @@ namespace AdminBlogs.Repositories
         {
             _adminBlogsContext= adminBlogsContext;
         }
-        public IEnumerable<UserModel> UserDetails()
+        public IEnumerable<User> UserDetails()
         {
-            return _adminBlogsContext.userModels.ToList();
+            return _adminBlogsContext.users.ToList();
         }
 
-        public UserModel Authenticate(Login login)
+        public User Authenticate(Login login)
         {
             var user = _adminBlogsContext.logins.Where(s => s.EmailId == login.EmailId && s.Passsword == login.Passsword).FirstOrDefault<Login>();
             if (user != null)
             {
-                return _adminBlogsContext.userModels.Where(s => s.Email == user.EmailId).FirstOrDefault();
+                return _adminBlogsContext.users.Where(s => s.Email == user.EmailId).FirstOrDefault();
             }
             return null;
         }
 
-        public OkObjectResult UserRegistration(UserModel userModel)
+        public OkObjectResult UserRegistration(User userModel)
         {
             try
             {
-                var res = _adminBlogsContext.userModels.AddAsync(userModel);
+                var res = _adminBlogsContext.users.AddAsync(userModel);
                 var response = _adminBlogsContext.SaveChanges();
                 if(response==1)
                 {

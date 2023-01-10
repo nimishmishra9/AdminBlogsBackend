@@ -5,9 +5,9 @@ namespace AdminBlogs.Services
 {
     public interface IAuthService
     {
-        public IEnumerable<UserModel> UserDetails();
-        public UserModel Authenticate(Login login);
-        public string BuildToken(UserModel user);
-        public OkObjectResult UserRegistration(UserModel userModel);
+        public IEnumerable<User> UserDetails();
+        public User Authenticate(Login login);
+        public string BuildToken(User user);
+        public OkObjectResult UserRegistration(User userModel);
     }
 }
